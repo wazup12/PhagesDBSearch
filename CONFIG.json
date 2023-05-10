@@ -1,0 +1,20 @@
+{
+  "SCHOOLS": [
+    "LEHI",
+    "UNTD",
+    "USFL",
+    "CHAT"
+  ],
+  "HOSTS": [
+    "Gordonia",
+    "Streptomyces"
+  ],
+  "BASE_URL": "https://phagesdb.org/api/",
+  "COLUMNS": [
+    "Phage",
+    "Species",
+    "Institution"
+  ],
+  "FILENAME": "phages_by_institution",
+  "PAGE_SIZE": 3000
+}
