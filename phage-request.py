@@ -10,12 +10,13 @@ PAGE_SIZE = 3000
 
 def get_request(request_ending):
   url = BASE_URL + request_ending
-  headers = {'Accept': 'appglication/json', 'X-CSRFToken': 'ShHZqkZD3ry8Rn7vpL04wG1GbBGoOKJ0klRI5I0nO8sP198YXktFVKIfEZDBhkKb'}
+  headers = {'Accept': 'application/json', 'X-CSRFToken': 'ShHZqkZD3ry8Rn7vpL04wG1GbBGoOKJ0klRI5I0nO8sP198YXktFVKIfEZDBhkKb'}
   r = requests.get(url, headers=headers)
   return r.json()
 
 def refine(results, species):
   count = int(results['count'])
+  print(f"Refining results for {species}")
   if PAGE_SIZE < count:
     print(f"WARNING: results for {species} may be truncated")
     print(f"Result size {count} greater than {PAGE_SIZE}")
